@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+--bg-main: hsl(233, 47%, 7%);
+--bg-card: hsl(244, 38%, 16%);
+--accent: hsl(277, 64%, 61%);
+
+--main-heading: hsl(0, 0%, 100%);
+--main-paragraph: hsla(0, 0%, 100%, 0.75);
+--stat-headings: hsla(0, 0%, 100%, 0.75);
+}
+/* CSS RESET */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin:0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    background-color: var(--bg-main);
+}
+
+/* End Reset */
+.container {
+    max-width: 375px; /* Mobile Layout*/
+    margin: 5em auto; /* To center the box*/
+}
+
+.column {
+    border-radius: 10px;
+    overflow: hidden; /*to get the border-radius working*/
+}
+
+.bg-col {
+    background: linear-gradient(
+        rgba(155, 19, 240, 0.45), 
+        rgba(95, 17, 143, 0.45)),
+    url('images/image-header-mobile.jpg')no-repeat center center/cover;
+    min-height: 40vh;
+}
+
+.column {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-card);
+}
+
+.info-col {
+    text-align: center;
+    width: 80%;
+    margin: 2em auto;
+    line-height: 1.5;
+}
+
+.info-col span {
+    color: var(--accent);
+}
+.info-col h1 {
+    color: var(--main-heading);
+}
+.info-col p {
+    color: var(--main-paragraph);
+    font-size: 1.1rem;
+}
+
+.stats {
+    color: var(--stat-headings); 
+    padding-bottom: 2em;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 1.5rem;
+    color:var(--stat-headings);
+}
+
+.stat-card p {
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        max-width: 1440px;
+    }
+
+    .column{
+        display: flex;
+        align-content: center;
+        width: 70%;
+        margin: 10em auto;
+    }
+
+    .bg-col {
+        background: linear-gradient(
+        rgba(155, 19, 240, 0.45), 
+        rgba(95, 17, 143, 0.45)),
+        url('images/image-header-desktop.jpg')no-repeat center center/cover;
+        width: 35vw;
+        order: 2;
+    }
+
+    .flex-col {
+        width: 50%;
+        padding: 2em;
+    }
+    
+    .info-col {
+        text-align: start;
+       
+    }
+
+    .info-col h1{
+        font-size: 2rem;
+    }
+    .info-col p {
+        width: 90%;
+        font-size: .85rem;
+    }
+
+    .stats {
+        /* grid-column: 2 /3; */
+        padding-top: 1em;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .stat-card {
+        text-align: justify;
+    }
+
+}
