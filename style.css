@@ -49,7 +49,7 @@ body {
         rgba(155, 19, 240, 0.45), 
         rgba(95, 17, 143, 0.45)),
     url('images/image-header-mobile.jpg')no-repeat center center/cover;
-    min-height: 40vh;
+    min-height: 60vmin;
 }
 
 .column {
@@ -112,6 +112,7 @@ body {
         rgba(155, 19, 240, 0.45), 
         rgba(95, 17, 143, 0.45)),
         url('images/image-header-desktop.jpg')no-repeat center center/cover;
+        min-height: auto;
         width: 35vw;
         order: 2;
     }
